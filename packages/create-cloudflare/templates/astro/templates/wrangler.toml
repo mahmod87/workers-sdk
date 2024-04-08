@@ -1,5 +1,6 @@
 name = "<TBD>"
 compatibility_date = "<TBD>"
+pages_build_output_dir = "./dist"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
@@ -50,3 +51,21 @@ compatibility_date = "<TBD>"
 # [[services]]
 # binding = "MY_SERVICE"
 # service = "my-service"
+
+# If you'd like to use different bindings for preview and production environments, you can do so
+# by following the examples below.
+# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration#environment-specific-overrides
+
+# [[env.preview.kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "<PREVIEW_NAMESPACE_ID>"
+
+# [[env.production.kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "<PRODUCTION_NAMESPACE_ID>"
+
+# [env.preview.vars]
+# API_KEY = "xyz789"
+
+# [env.production.vars]
+# API_KEY = "abc123"
